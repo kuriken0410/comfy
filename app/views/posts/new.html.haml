@@ -1,0 +1,23 @@
+.container{:style => "padding-top:50px"}
+  .container.mt-5.p-lg-5.bg-light
+    .row.d-flex.justify-content-center.pt-3
+      %h3 POST
+    = form_with model: @post, html: {class: "novalidate"}, local: true do |form|
+      .custom-file.mb-5.mt-2
+        = form.file_field :image, class: "custom-file-input pb-3", required: "", type: "file", id: "customFile"
+        = form.label :'Image file selection...', class: 'custom-file-label pb-3', for: "customFile"
+        .invalid-feedback Please choose the file
+      .form-group.pb-3
+        = form.label :'Write your post freely', for: "Textarea"
+        = form.text_area :text, id: "Textarea", class: 'form-control', placeholder: "text", required: "", rows: "3"
+        .invalid-feedback Please write
+      .form-group.d-flex.justify-content-center.pb-4
+        = form.submit "POST", class: 'border-0 px-5 py-2 bg-warning rounded'
+
+%footer.bg-light.mt-5.fixed-bottom
+  .container
+    .row.d-flex.justify-content-center
+      %h3.font-weight-bold
+        %a.text-secondary{:href => "/"} Comfy
+      .w-100
+      %p.text-secondary Created and maintained by kuriken.
