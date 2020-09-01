@@ -83,7 +83,7 @@
 # :page_facing_up: DB設計
 
 ## ER図
-![comｆｙ](https://user-images.githubusercontent.com/63842526/91152535-09de5680-e6fa-11ea-95e3-b4273edfb7ac.jpg)
+![comｆｙ](https://gyazo.com/97f24ef339423a2cd9ef39fe224f83e9)
 
 ## usersテーブル  
 |Column|Type|Options|
