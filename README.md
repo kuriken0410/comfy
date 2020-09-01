@@ -92,10 +92,10 @@
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :tweets
+- has_many :posts
 - has_many :comments
 
-## tweetsテーブル
+## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
@@ -110,7 +110,7 @@
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|tweet_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
 ### Association  
-- belongs_to :tweet  
+- belongs_to :post
 - belongs_to :user  
