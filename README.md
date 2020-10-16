@@ -57,6 +57,7 @@
 
 ### ■ デプロイ
 * heroku
+* https://comfy-kuri.herokuapp.com
 
 ## :globe_with_meridians: インストール方法
 1.このリポジトリを複製<br>
