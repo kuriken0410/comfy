@@ -30,7 +30,7 @@
         - @posts.each do |post|
           .col-md-4.col-lg-3.mb-5
             .card.mb-4.shadow-sm
-              = image_tag post.image.to_s, width: '100%', height: "280", alt: "画像"
+              = image_tag post.image.url, width: '100%', height: "280", alt: "画像"
               .card-body
                 %h5.card-title 
                   = post.user.nickname 
