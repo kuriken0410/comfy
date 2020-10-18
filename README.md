@@ -3,7 +3,7 @@
 <h1 align="center">SNSサイト（COMFY）</h1>
 
 ## アプリケーション概要
-* 部屋着投稿を中心としたWebアプリです。
+* 部屋着投稿を中心としたWebアプリケーションです。
 * 作成期間： 2020/9/1 〜 現在開発途中
 * - ![top_page](https://gyazo.com/86d4eff8590a47381a6a2e36c63cb0cf/raw)
 
