@@ -2,35 +2,21 @@
   %p
     = @nickname
     さんの投稿一覧
-  - @posts.each do |post|
-    -# = render partial: "posts/post", locals: { post: post }
-
-.contents.row 
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    現在開発途中です。
-  %p
-    ※※現在開発途中のため、ページは空欄になっております。
-  %p
-    ※※投稿内容及びコメントを実装
+    %main
+      .album.py-5.bg-light
+        .container
+          .row.d-flex.justify-content-center
+            - @posts.each do |post|
+              -# = render partial: "posts/post", locals: { post: post }
+              %main{:role => "main"}
+              .col-md-4.col-lg-3.mb-5
+                .card.mb-4.shadow-sm
+                  = image_tag post.image.url, width: '100%', height: "280", alt: "画像"
+                  .card-body
+                    %h5.card-title 
+                      = post.user.nickname 
+                    %p.card-text 
+                      = post.text
+                  .card-footer
+                    ハッシュタグ
+    = paginate @kaminari
