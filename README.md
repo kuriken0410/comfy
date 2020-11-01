@@ -1,11 +1,11 @@
 <h1 align="center">SNSサイト（COMFY）</h1>
 
-## アプリケーション概要
+## :globe_with_meridians: アプリケーション概要
 * 部屋着投稿を中心としたWebアプリケーションです。
 * 作成期間： 2020/9/1 〜 現在開発途中
 * - ![top_page](https://gyazo.com/86d4eff8590a47381a6a2e36c63cb0cf/raw)
 
-## 機能一覧
+## :globe_with_meridians: 機能一覧
 ## ログイン関係（gem 'devise'を利用）  
 1)nickname（6文字以上）,email,pwdの組み合わせでvalidationを実施。  
 2)posｔs#index(root)ページは、application.htmlに<% if user_signed_in? %>と書き、ログイン時、未ログイン時の表示を分けている（ログインボタンが異なる）。  
@@ -28,7 +28,7 @@
 ②nicknameが空では登録できないこと。  
 ③passwordが空では登録できないこと。
 
-## 主な使用技術
+## :globe_with_meridians: 主な使用技術
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
 <a><img src="https://user-images.githubusercontent.com/39142850/71774548-731b2900-2fb4-11ea-99ba-565546c5acb4.png" height="60px;" /></a> <!-- RubyOnRailsのロゴ -->
 <a><img src="https://user-images.githubusercontent.com/39142850/71774618-b32edb80-2fb5-11ea-9050-d5929a49e9a5.png" height="60px;" /></a> <!-- Hamlのロゴ -->
