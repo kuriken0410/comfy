@@ -7,26 +7,32 @@
 
 ## :globe_with_meridians: 機能一覧
 ## ログイン関係（gem 'devise'を利用）  
-1)nickname（6文字以上）,email,pwdの組み合わせでvalidationを実施。  
-2)posｔs#index(root)ページは、application.htmlに<% if user_signed_in? %>と書き、ログイン時、未ログイン時の表示を分けている（ログインボタンが異なる）。  
-3)posｔs_controller に before_action :move_to_index, except: [:index, :show] と記述し、未ログイン時に投稿しようとすると、index ページへ飛ぶように設定している。（画面上では、そもそも投稿ボタンの設定自体が無い）  
-## 投稿関連（コメント投稿機能を含む）   
-1)indexページの投稿写真に表示されるツイート削除ボタンについては、 renderファイルのtweet.html.erb に、<% if user_signed_in? && current_user.id == tweet.user_id %>と記述し、ログイン時、かつ投稿のuser_id が,current_userと一致する投稿にのみ、表示される設定としている。  
-【ログイン状態（ユーザ自身の投稿）】  
-![ログイン状態（ユーザー自身の投稿）]
+1)nickname（8文字以上）,email,pwdの組み合わせでvalidationを実施。  
+2)posts#index(root)ページは、application.html.hamlに - if user_signed_in? と書き、ログイン時、未ログイン時の表示を分けている（ログインボタンが異なる）。  
+3)posts_controller に before_action :move_to_index, except: [:index, :show, :search] と記述し、未ログイン時に投稿しようとすると、index ページへ飛ぶように設定している。（画面上では、そもそも投稿ボタンの設定自体が無い）  
+## 投稿関連（コメント投稿機能を含む※開発中）   
+1)indexページの投稿写真に表示されるツイート削除ボタンについては、 renderファイルの post.html.haml に、- if user_signed_in? && current_user.id == post.user_id と記述し、ログイン時、かつ投稿の user_id が, current_user と一致する投稿にのみ、表示される設定としている。  
 2)投稿した写真右下に表示されているニックネームには、user マイページへ遷移できるリンクが設定されている。  
 3)投稿詳細ページ（詳細ボタンをクリックすると遷移）に、コメント投稿機能を設置。  
-①この実装に合わせて、posｔモデルとcommentモデル（一対多）、及びuserモデルとcommentモデル（一対多）にアソシエーションを定義（詳細はDB設計をご確認お願いします）。  
-②comments_controllerのルーティングを、posｔs_controllerのルーティングの中にネストさせて、/tweets/:tweet_id/commentsというルーティングを実現、tweet_idをcommentのparamsに追加。  
-③show.html.hamｌのコメント投稿関連部分に、 <% if current_user %> と記述し、未ログイン状態でのコメント投稿ができないように設定。  
-4)コメント投稿機能へ非同期通信を実装。これが初めてAppに実装した非同期通信。JS（jQuery）を用いる。関連するファイルは、javascripts/comment.js。  
-投稿データ（form_tag内のデータ）は、FormDataオブジェクトに格納。  
-## User 関連  
-１）ユーザー登録に関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容（一部抜粋）で  
-テストを行う。  
-①nicknameとemail、passwordとpassword_confirmationが存在すれば登録できること。  
-②nicknameが空では登録できないこと。  
-③passwordが空では登録できないこと。
+①この実装に合わせて、postモデルとcommentモデル（一対多）、及びuserモデルとcommentモデル（一対多）にアソシエーションを定義（詳細はDB設計をご確認お願いします）。  
+②comments_controllerのルーティングを、posts_controllerのルーティングの中にネストさせて、/posts/:post_id/commentsというルーティングを実現、post_idをcommentのparamsに追加。  
+③show.html.hamlのコメント投稿関連部分に、 - if current_user と記述し、未ログイン状態でのコメント投稿ができないように設定。  
+4)コメント投稿機能へ非同期通信を実装。JS（jQuery）を用いる。関連するファイルは、javascripts/comment.js。投稿データ（form_tag内のデータ）は、FormDataオブジェクトに格納。  
+## テスト  
+１）ユーザー登録に関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容でテストを行う。 
+①nicknameとemail、passwordとpassword_confirmationが存在すれば登録できること
+②nicknameが空では登録できないこと
+③emailが空では登録できないこと
+④passwordが空では登録できないこと
+⑤passwordが存在してもpassword_confirmationが空では登録できないこと
+⑥nicknameが7文字以上であれば登録できないこと
+⑦nicknameが6文字以下では登録できること
+⑧重複したemailが存在する場合登録できないこと
+⑨passwordが6文字以上であれば登録できること
+⑩passwordが5文字以下であれば登録できないこと
+2）post_controllerに関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容（一部抜粋）でテストを行う。 
+①newアクションが動いたあとnew.html.erbに遷移するか
+②indexアクションで定義している@tweetsは配列の形で取得されてくるということ
 
 ## :globe_with_meridians: 主な使用技術
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
