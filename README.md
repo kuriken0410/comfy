@@ -32,8 +32,8 @@
 * passwordが5文字以下であれば登録できないこと
 
 2）posts_controllerに関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容（一部抜粋）でテストを行う。 
-* newアクションが動いたあとnew.html.erbに遷移するか
-* indexアクションで定義している@tweetsは配列の形で取得されてくるということ
+* newアクションが動いたあとnew.html.hamlに遷移するか
+* indexアクションで定義している@postsは配列の形で取得されてくるということ
 
 ## :globe_with_meridians: 主な使用技術
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
