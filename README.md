@@ -1,5 +1,3 @@
-# README
-
 <h1 align="center">SNSサイト（COMFY）</h1>
 
 ## アプリケーション概要
