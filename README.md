@@ -7,7 +7,7 @@
 
 ## :globe_with_meridians: 機能一覧
 ## ログイン関係（gem 'devise'を利用）  
-1)nickname（8文字以上）,email,pwdの組み合わせでvalidationを実施。  
+1)nickname（9文字以下）,email,pwdの組み合わせでvalidationを実施。  
 2)posts#index(root)ページは、application.html.hamlに - if user_signed_in? と書き、ログイン時、未ログイン時の表示を分けている（ログインボタンが異なる）。  
 3)posts_controller に before_action :move_to_index, except: [:index, :show, :search] と記述し、未ログイン時に投稿しようとすると、index ページへ飛ぶように設定している。（画面上では、そもそも投稿ボタンの設定自体が無い）  
 ## 投稿関連（コメント投稿機能を含む※開発中）   
