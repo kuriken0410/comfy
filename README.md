@@ -20,19 +20,19 @@
 4)コメント投稿機能へ非同期通信を実装。JS（jQuery）を用いる。関連するファイルは、javascripts/comment.js。投稿データ（form_tag内のデータ）は、FormDataオブジェクトに格納。  
 ## テスト  
 １）ユーザー登録に関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容でテストを行う。 
-①nicknameとemail、passwordとpassword_confirmationが存在すれば登録できること
-②nicknameが空では登録できないこと
-③emailが空では登録できないこと
-④passwordが空では登録できないこと
-⑤passwordが存在してもpassword_confirmationが空では登録できないこと
-⑥nicknameが7文字以上であれば登録できないこと
-⑦nicknameが6文字以下では登録できること
-⑧重複したemailが存在する場合登録できないこと
-⑨passwordが6文字以上であれば登録できること
-⑩passwordが5文字以下であれば登録できないこと
+* nicknameとemail、passwordとpassword_confirmationが存在すれば登録できること
+* nicknameが空では登録できないこと
+* emailが空では登録できないこと
+* passwordが空では登録できないこと
+* passwordが存在してもpassword_confirmationが空では登録できないこと
+* nicknameが7文字以上であれば登録できないこと
+* nicknameが6文字以下では登録できること
+* 重複したemailが存在する場合登録できないこと
+* passwordが6文字以上であれば登録できること
+* passwordが5文字以下であれば登録できないこと
 2）post_controllerに関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容（一部抜粋）でテストを行う。 
-①newアクションが動いたあとnew.html.erbに遷移するか
-②indexアクションで定義している@tweetsは配列の形で取得されてくるということ
+* newアクションが動いたあとnew.html.erbに遷移するか
+* indexアクションで定義している@tweetsは配列の形で取得されてくるということ
 
 ## :globe_with_meridians: 主な使用技術
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
