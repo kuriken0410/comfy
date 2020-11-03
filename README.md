@@ -51,11 +51,11 @@
 #### フロントエンド
 * Haml 5.1.2
 * Sass 3.7.4
-* BOOTSTRAP　4.5.0
 * jquery-rails 4.4.0
 
 ### ■ フレームワーク
 * Ruby on Rails 6.0.3.2
+* BOOTSTRAP　4.5.0
 
 ### ■ データベース
 * MySQL 5.6.47
