@@ -49,6 +49,7 @@
 
 #### フロントエンド
 * Haml 5.1.2
+* Sass 3.7.4
 * BOOTSTRAP　4.5.0
 * jquery-rails 4.4.0
 
