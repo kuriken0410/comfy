@@ -2,7 +2,7 @@
 
 * - ![top_page](https://gyazo.com/86d4eff8590a47381a6a2e36c63cb0cf/raw)
 
-## :globe_with_meridians: アプリケーション概要
+## :globe_with_meridians: Comfyとは
 * 部屋着投稿を中心としたWebアプリケーションです。
 * 作成期間： 2020/10/1 〜 現在開発途中
 * Trelloによるタスク管理
@@ -37,7 +37,7 @@
 * newアクションが動いたあとnew.html.hamlに遷移すること
 * indexアクションで定義している@postsは配列の形で取得されてくること
 
-## :globe_with_meridians: 主な使用技術
+## :globe_with_meridians: 主な使用技術・言語・ツール
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
 <a><img src="https://user-images.githubusercontent.com/39142850/71774548-731b2900-2fb4-11ea-99ba-565546c5acb4.png" height="60px;" /></a> <!-- RubyOnRailsのロゴ -->
 <a><img src="https://user-images.githubusercontent.com/39142850/71774618-b32edb80-2fb5-11ea-9050-d5929a49e9a5.png" height="60px;" /></a> <!-- Hamlのロゴ -->
