@@ -70,7 +70,7 @@
 
 ### ■ コードレビューツール
 * Sider
-* Rubocop
+* Rubocop 0.92.0
 
 ## :globe_with_meridians: インストール方法
 1.このリポジトリを複製<br>
