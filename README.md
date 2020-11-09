@@ -82,14 +82,11 @@
 3.gemをアプリケーションに適用<br>
 `$ bundle install`<br>
 
-4.DBの作成&反映<br>
+4.データベースの作成&反映<br>
 `$ rails db:create`<br>
 `$ rails db:migrate`<br>
 
-5.カテゴリ一覧の反映<br>
-`$ rails db:seed`<br>
-
-6.アプリケーションの起動<br>
+5.アプリケーションの起動<br>
 `$ rails s`<br>
 :point_right:`http://localhost:3000`
 
