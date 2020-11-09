@@ -55,7 +55,7 @@
 * jquery-rails 4.4.0
 
 ### ■ フレームワーク
-* Ruby on Rails 6.0.0
+* Ruby on Rails 6.0.3.2
 * BOOTSTRAP　4.5.0
 
 ### ■ データベース
