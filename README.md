@@ -8,11 +8,11 @@
 * Trelloによるタスク管理
 
 ## :globe_with_meridians: 機能一覧
-## ログイン関係（gem 'devise'を利用）  
+### ログイン関係（gem 'devise'を利用）  
 1)nickname（9文字以下）,email,pwdの組み合わせでvalidationを実施。  
 2)posts#index(root)ページは、application.html.hamlに - if user_signed_in? と書き、ログイン時、未ログイン時の表示を分けている（ログインボタンが異なる）。  
 3)posts_controller に before_action :move_to_index, except: [:index, :show, :search] と記述し、未ログイン時に投稿しようとすると、index ページへ飛ぶように設定している。（画面上では、そもそも投稿ボタンの設定自体が無い）  
-## 投稿関連（コメント投稿機能を含む※開発中）   
+### 投稿関連（コメント投稿機能を含む※開発中）   
 1)indexページの投稿写真に表示されるツイート削除ボタンについては、 renderファイルの post.html.haml に、- if user_signed_in? && current_user.id == post.user_id と記述し、ログイン時、かつ投稿の user_id が, current_user と一致する投稿にのみ、表示される設定としている。  
 2)投稿した写真右下に表示されているニックネームには、user マイページへ遷移できるリンクが設定されている。  
 3)投稿詳細ページ（詳細ボタンをクリックすると遷移）に、コメント投稿機能を設置。  
@@ -20,7 +20,7 @@
 ②comments_controllerのルーティングを、posts_controllerのルーティングの中にネストさせて、/posts/:post_id/commentsというルーティングを実現、post_idをcommentのparamsに追加。  
 ③show.html.hamlのコメント投稿関連部分に、 - if current_user と記述し、未ログイン状態でのコメント投稿ができないように設定。  
 4)コメント投稿機能へ非同期通信を実装。JS（jQuery）を用いる。関連するファイルは、javascripts/comment.js。投稿データ（form_tag内のデータ）は、FormDataオブジェクトに格納。  
-## テスト  
+### テスト  
 １）ユーザー登録に関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容でテストを行う。 
 * nicknameとemail、passwordとpassword_confirmationが存在すれば登録できること
 * nicknameが空では登録できないこと
