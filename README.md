@@ -55,11 +55,11 @@
 * jquery-rails 4.4.0
 
 ### ■ フレームワーク
-* Ruby on Rails 6.0.3.2
+* Ruby on Rails 6.0.0
 * BOOTSTRAP　4.5.0
 
 ### ■ データベース
-* MySQL 5.6.47
+* MySQL 0.5.3
 
 ### ■ インフラ
 * AWS S3
@@ -77,7 +77,7 @@
 `$ git clone https://github.com/kuriken0410/comfy`
 
 2.インストールしたリポジトリに移動<br>
-`$ cd comfy.git`
+`$ cd comfy`
 
 3.gemをアプリケーションに適用<br>
 `$ bundle install`<br>
@@ -90,7 +90,7 @@
 `$ rails s`<br>
 :point_right:`http://localhost:3000`
 
-# :page_facing_up: DB設計
+## :page_facing_up: データベース設計
 
 ## ER図
 ![comｆｙ](https://gyazo.com/97f24ef339423a2cd9ef39fe224f83e9/raw)
