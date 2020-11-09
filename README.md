@@ -21,7 +21,7 @@
 ③show.html.hamlのコメント投稿関連部分に、 - if current_user と記述し、未ログイン状態でのコメント投稿ができないように設定。  
 4)コメント投稿機能へ非同期通信を実装。JS（jQuery）を用いる。関連するファイルは、javascripts/comment.js。投稿データ（form_tag内のデータ）は、FormDataオブジェクトに格納。  
 ### テスト  
-１）ユーザー登録に関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容でテストを行う。 
+１）ユーザー登録に関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容でテストを実施。 
 * nicknameとemail、passwordとpassword_confirmationが存在すれば登録できること
 * nicknameが空では登録できないこと
 * emailが空では登録できないこと
@@ -33,9 +33,9 @@
 * passwordが6文字以上であれば登録できること
 * passwordが5文字以下であれば登録できないこと
 
-2）posts_controllerに関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容（一部抜粋）でテストを行う。 
-* newアクションが動いたあとnew.html.hamlに遷移するか
-* indexアクションで定義している@postsは配列の形で取得されてくるということ
+2）posts_controllerに関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容（一部抜粋）でテストを実施。 
+* newアクションが動いたあとnew.html.hamlに遷移すること
+* indexアクションで定義している@postsは配列の形で取得されてくること
 
 ## :globe_with_meridians: 主な使用技術
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
