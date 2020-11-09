@@ -68,6 +68,10 @@
 * heroku
 * https://comfy-kuri.herokuapp.com
 
+### ■ コードレビューツール
+* Sider
+* Rubocop
+
 ## :globe_with_meridians: インストール方法
 1.このリポジトリを複製<br>
 `$ git clone https://github.com/kuriken0410/comfy`
