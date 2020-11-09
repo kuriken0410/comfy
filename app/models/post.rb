@@ -7,7 +7,8 @@ class Post < ApplicationRecord
 
   def self.search(search)
     return Post.all unless search
-    Post.where('text LIKE(?)', "%#{search}%")
+    search = "%#{search}%"
+    Post.find_by_sql(["select * from posts where text like ? ", search])
   end
 
 end
