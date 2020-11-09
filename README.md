@@ -1,4 +1,4 @@
-<h1 align="center">Webアプリ（COMFY）</h1>
+<h1 align="center">Webアプリ（C）</h1>
 
 * - ![top_page](https://gyazo.com/86d4eff8590a47381a6a2e36c63cb0cf/raw)
 
