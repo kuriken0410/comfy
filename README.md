@@ -56,7 +56,7 @@
 
 ### ■ フレームワーク
 * Ruby on Rails 6.0.3.2
-* BOOTSTRAP　4.5.0
+* BOOTSTRAP 4.5.0
 
 ### ■ データベース
 * MySQL 0.5.3
