@@ -5,6 +5,7 @@
 ## :globe_with_meridians: アプリケーション概要
 * 部屋着投稿を中心としたWebアプリケーションです。
 * 作成期間： 2020/9/1 〜 現在開発途中
+* Trelloによるタスク管理
 
 ## :globe_with_meridians: 機能一覧
 ## ログイン関係（gem 'devise'を利用）  
