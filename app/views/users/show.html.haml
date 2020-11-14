@@ -18,5 +18,6 @@
                     = post.text
                 .card-footer
                   ハッシュタグ
-  -# = render partial: "card", locals: { posts: card }
-  = paginate @kaminari
+    -# = render partial: "card", locals: { posts: card }
+    = paginate @kaminari
+
