@@ -22,6 +22,8 @@
       %span.sr-only Next
 
 %h4 本アプリケーションは現在開発中です。（製作主より）
+-# TODO:ハイライトのテスト
+-# FIXME:ハイライトのテスト
 
 %main
   .album.py-5.bg-light
@@ -32,9 +34,9 @@
             .card.mb-4.shadow-sm
               = image_tag post.image.url, width: '100%', height: "280", alt: "画像"
               .card-body
-                %h5.card-title 
-                  = post.user.nickname 
-                %p.card-text 
+                %h5.card-title
+                  = post.user.nickname
+                %p.card-text
                   = post.text
               .card-footer
                 ハッシュタグ
