@@ -56,16 +56,16 @@
 
 ### ■ フレームワーク
 * Ruby on Rails 6.0.3.2
-* BOOTSTRAP 4.5.0
+* BOOTSTRAP 4.2.1
 
 ### ■ データベース
-* MySQL 0.5.3
+* MySQL 5.6.50
 
 ### ■ インフラ
 * AWS S3
 
 ### ■ デプロイ
-* heroku
+* heroku 7.47.0
 * https://comfy-kuri.herokuapp.com
 
 ### ■ コードレビューツール
