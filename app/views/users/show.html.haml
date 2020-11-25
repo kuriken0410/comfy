@@ -17,7 +17,8 @@
                   %p.card-text
                     = post.text
                 .card-footer
-                  ハッシュタグ
+                  = link_to '編集', edit_post_path(post.id), method: :get
+                  = link_to '削除', post_path(post.id), method: :delete
 
     = paginate @kaminari
 
@@ -28,4 +29,3 @@
         %a.text-secondary{:href => "/"} Comfy
       .w-100
       %p.text-secondary Created and maintained by kuriken.
-      
