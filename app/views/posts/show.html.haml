@@ -8,7 +8,6 @@
             = link_to '編集', edit_tweet_path(@tweet.id), method: :get
           %li
             = link_to '削除', tweet_path(@tweet.id), method: :delete
-            -# ここから
     %p= @tweet.text
     %span.name
       %a{:href => "/users/#{@tweet.user.id}"}
