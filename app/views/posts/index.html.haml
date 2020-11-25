@@ -8,12 +8,12 @@
         = image_tag "p7811.jpg", alt: "First slide", class: "img-fluid"
         .carousel-caption.d-none.d-md-block
           %h3.text-secondary Choose your favorite
-          %p.text-secondary I'm sure you'll find special clothes just for you
+          %p.text-secondary I'm sure you'll find special clothes just for you.
       .carousel-item
         = image_tag "p5213.jpg", alt: "Second slide", class: "img-fluid"
         .carousel-caption.d-none.d-md-block
           %h3.text-secondary Choose a gift for your partner
-          %p.text-secondary You will surely find the perfect clothes for your partner
+          %p.text-secondary You will surely find the perfect clothes for your partner.
     %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleCaptions", :role => "button"}
       %span.carousel-control-prev-icon{"aria-hidden" => "true"}
       %span.sr-only Previous
@@ -21,7 +21,7 @@
       %span.carousel-control-next-icon{"aria-hidden" => "true"}
       %span.sr-only Next
 
-%h4 本アプリケーションは開発中です。（製作主より）
+%h4 本アプリケーションは開発中です。（制作主より）
 -# TODO:ハイライトのテスト
 -# FIXME:ハイライトのテスト
 
@@ -39,7 +39,9 @@
                 %p.card-text
                   = post.text
               .card-footer
-                ハッシュタグ
+                .more_list
+                  = link_to '編集', edit_post_path(post.id), method: :get
+                  = link_to '削除', post_path(post.id), method: :delete
 
   = paginate @kaminari
 
