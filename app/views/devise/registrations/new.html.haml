@@ -1,27 +1,28 @@
 .container.d-flex.flex-column.justify-content-center.align-items-center.my-5{:style => "padding-top:50px"}
-  %h2 Sign up
+  %h2 新規登録
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
     .field.mt-4.mb-2
-      = f.label :nickname
-      %em (8 characters maximum)
+      = f.label :ニックネーム
+      %em（8文字以内）
       %br/
       = f.text_field :nickname, autofocus: true, autocomplete: "nickname", size: 50
     .field.mt-1.mb-2
-      = f.label :email
+      = f.label :メールアドレス
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email", size: 50
     .field.mb-3
-      = f.label :password
+      = f.label :パスワード
       - if @minimum_password_length
         %em
-          (#{@minimum_password_length} characters minimum)
+          （#{@minimum_password_length}文字以上）
       %br/
       = f.password_field :password, autocomplete: "new-password", size: 50
     .field.mb-4
-      = f.label :password_confirmation
+      = f.label :パスワード
+      %em（再度入力してください）
       %br/
       = f.password_field :password_confirmation, autocomplete: "new-password", size: 50
     .actions.mb-5.d-flex.justify-content-center
-      = f.submit "Sign up"
+      = f.submit "　登　録　"
 = render 'posts/footer'
