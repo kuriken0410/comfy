@@ -46,7 +46,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:image, :text).merge(user_id: current_user.id)
   end
 
-  def set_tweet
+  def set_post
     @post = Post.find(params[:id])
   end
 
