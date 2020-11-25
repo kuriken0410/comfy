@@ -1,12 +1,12 @@
 .container.d-flex.flex-column.justify-content-center.align-items-center.my-5{:style => "padding-top:50px"}
-  %h2 Log in
+  %h2 ログイン
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field.mt-1.mb-2
-      = f.label :email
+      = f.label :メールアドレス
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email", size: 50
     .field.mb-3
-      = f.label :password
+      = f.label :パスワード
       %br/
       = f.password_field :password, autocomplete: "current-password", size: 50
     - if devise_mapping.rememberable?
@@ -14,7 +14,7 @@
         = f.check_box :remember_me
         = f.label :remember_me
     .actions.mb-5.d-flex.justify-content-center
-      = f.submit "Log in"
+      = f.submit "　ログイン　"
   = render "devise/shared/links"
 
 = render 'posts/footer'
