@@ -16,9 +16,10 @@
                     = post.user.nickname
                   %p.card-text
                     = post.text
-                .card-footer
-                  = link_to '編集', edit_post_path(post.id), method: :get
-                  = link_to '削除', post_path(post.id), method: :delete
+                .btn-group
+                  = link_to '詳細', post_path(post.id), method: :get, class: 'btn btn-outline-secondary btn-sm'
+                  = link_to '編集', edit_post_path(post.id), method: :get, class: 'btn btn-outline-secondary btn-sm'
+                  = link_to '削除', post_path(post.id), method: :delete, class: 'btn btn-outline-secondary btn-sm'
 
     = paginate @kaminari
 
