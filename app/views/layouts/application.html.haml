@@ -22,15 +22,14 @@
           - if user_signed_in?
             .grid-6
               %ul.nav.nav-tabs
-                %li.nav-item.my-auto.mr-5.font-weight-bold
-                  = current_user.nickname
-                %li.nav-item.dropdown.ml-5
+                %li.nav-item.dropdown
                   %a.nav-link.dropdown-toggle.text-dark.font-weight-bold{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-                    Menu
+                    = current_user.nickname
                   .dropdown-menu
-                    = link_to "投稿する", new_post_path, class: 'dropdown-item post'
                     = link_to "マイページ", "/users/#{current_user.id}", class: 'dropdown-item post'
                     = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'dropdown-item post'
+                %li.nav-item.font-weight-bold.ml-5.pb-0
+                  = link_to "投稿する", new_post_path, class: 'btn btn-outline-dark font-weight-bold'
           - else
             .grid-6
               = link_to "ログイン", new_user_session_path, class: 'btn btn-outline-dark mr-4'
