@@ -9,7 +9,7 @@ describe User do
     end
 
     it "is invalid without a nickname" do
-      user = build(:user, nickname: "") 
+      user = build(:user, nickname: "")
       user.valid?
       expect(user.errors[:nickname]).to include("can't be blank")
     end
@@ -60,5 +60,6 @@ describe User do
       user.valid?
       expect(user.errors[:password]).to include("is too short (minimum is 6 characters)")
     end
+
   end
 end
