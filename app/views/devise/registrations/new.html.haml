@@ -1,4 +1,4 @@
-.container.d-flex.flex-column.justify-content-center.align-items-center.my-5{:style => "padding-top:50px"}
+.container.d-flex.flex-column.justify-content-center.align-items-center.my-5.pt-5
   %h2 新規登録
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
@@ -14,8 +14,7 @@
     .field.mb-3
       = f.label :パスワード
       - if @minimum_password_length
-        %em
-          （#{@minimum_password_length}文字以上）
+        %em（#{@minimum_password_length}文字以上）
       %br/
       = f.password_field :password, autocomplete: "new-password", size: 50
     .field.mb-4

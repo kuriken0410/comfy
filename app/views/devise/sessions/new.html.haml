@@ -1,4 +1,4 @@
-.container.d-flex.flex-column.justify-content-center.align-items-center.my-5{:style => "padding-top:50px"}
+.container.d-flex.flex-column.justify-content-center.align-items-center.my-5.pt-5
   %h2 ログイン
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field.mt-1.mb-2
@@ -16,5 +16,4 @@
     .actions.mb-5.d-flex.justify-content-center
       = f.submit "　ログイン　"
   = render "devise/shared/links"
-
 = render 'posts/footer'
