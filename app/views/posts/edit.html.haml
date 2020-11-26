@@ -9,7 +9,7 @@
         .invalid-feedback ファイルを選んでください
       .form-group.pb-3
         = form.label :'本文記入欄', for: "Textarea"
-        = form.text_area :text, id: "Textarea", class: 'form-control', placeholder: "こちらに内容を記載してください", required: "", rows: "3"
+        = form.text_area :text, id: "Textarea", class: 'form-control', placeholder: "変更内容を記載してください", required: "", rows: "3"
         .invalid-feedback 本文を記載してください
       .form-group.d-flex.justify-content-center.pb-4
         = form.submit "更新する", class: 'border-0 px-5 py-2 bg-warning rounded'
