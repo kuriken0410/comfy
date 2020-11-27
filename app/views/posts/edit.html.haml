@@ -2,15 +2,6 @@
   .container.mt-5.p-lg-5.bg-light
     .row.d-flex.justify-content-center.pt-3
       %h3 編集する
-    = form_with model: @post, html: {class: "novalidate"}, local: true do |form|
-      .custom-file.mb-5.mt-4
-        = form.file_field :image, class: "custom-file-input pb-3", required: "", type: "file", id: "customFile"
-        = form.label :'ファイルを選んでください', class: 'custom-file-label pb-3', for: "customFile"
-        .invalid-feedback ファイルを選んでください
-      .form-group.pb-3
-        = form.label :'本文記入欄', for: "Textarea"
-        = form.text_area :text, id: "Textarea", class: 'form-control', placeholder: "変更内容を記載してください", required: "", rows: "3"
-        .invalid-feedback 本文を記載してください
-      .form-group.d-flex.justify-content-center.pb-4
-        = form.submit "更新する", class: 'border-0 px-5 py-2 bg-warning rounded'
+    = render partial: "form", locals: { post: @post }
+    
 = render partial: "footer"
