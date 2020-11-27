@@ -21,17 +21,13 @@
       %span.carousel-control-next-icon{"aria-hidden" => "true"}
       %span.sr-only Next
 
-%h4 本アプリケーションは開発中です。（制作主より）
--# TODO:ハイライトのテスト
--# FIXME:ハイライトのテスト
-
 %main
   .album.py-5.bg-light
     .container
       .row.d-flex.justify-content-center
         - @posts.each do |post|
           = render partial: "post", locals: { post: post }
-          
+
   = paginate @kaminari
 
 = render partial: "footer-index"
