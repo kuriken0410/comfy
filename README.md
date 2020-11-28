@@ -77,7 +77,7 @@
 
 ## :globe_with_meridians: インストール方法
 1.このリポジトリを複製<br>
-`$ git clone https://github.com/kuriken0410/comfy`
+`$ git clone https://github.com/kuriken0410/comfy.git`
 
 2.インストールしたリポジトリに移動<br>
 `$ cd comfy`
