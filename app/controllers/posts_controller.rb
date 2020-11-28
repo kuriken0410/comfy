@@ -35,13 +35,13 @@ class PostsController < ApplicationController
 
   def search
     @posts = Post.search(params[:keyword])
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    @kaminari = Post.page(params[:page]).per(9)
+    # respond_to do |format|
+    #   format.html
+    #   format.json
   end
 
-  
+
   private
   def post_params
     params.require(:post).permit(:image, :text).merge(user_id: current_user.id)
