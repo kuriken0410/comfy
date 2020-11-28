@@ -21,12 +21,14 @@
       %span.carousel-control-next-icon{"aria-hidden" => "true"}
       %span.sr-only Next
 
-= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
-  = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
-  = form.submit "検索", class: "search-btn"
+%search.bg-light.d-flex.justify-content-center.py-5
+  .form-inline
+    = form_with(url: search_posts_path, local: true, method: :get) do |form|
+      = form.text_field :keyword, placeholder: "投稿を検索する", class: 'form-control form-control-lg pr-5 mr-3'
+      = form.submit "検索", class: 'btn btn-warning btn-lg px-4'
 
 %main
-  .album.py-5.bg-light
+  .album.bg-light
     .container
       .row.d-flex.justify-content-center
         - @posts.each do |post|
