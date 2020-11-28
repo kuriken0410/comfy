@@ -35,7 +35,10 @@
 
 2）posts_controllerに関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容（一部抜粋）でテストを実施。 
 * newアクションが動いたあとnew.html.hamlに遷移すること
+* editアクションが動いたあとアクション内で定義されているインスタンス変数の値が期待したものになること
+* editアクションをリクエストした後、edit.html.hamlに遷移すること
 * indexアクションで定義している@postsは配列の形で取得されてくること
+* indexアクションをリクエストした後、index.html.hamlに遷移すること
 
 ## :globe_with_meridians: 主な使用技術・言語・ツールなど
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
