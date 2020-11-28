@@ -14,10 +14,6 @@
       .d-flex.justify-content-between.flex-md-row.align-items-center.p-3.px-xl-5.p-2.px-md-4.bg-white.border-bottom
         %h2.font-weight-bold.pl-5
           %a.text-dark.text-decoration-none{:href => "/"} Comfy
-        -# %nav.navbar.sticky-top.navbar-light.bg-light.m-4.justify-content-center.pl-5
-        -#   %form.form-inline.w-75.pl-5
-        -#     %input.form-control.mr-sm-2.w-75{:placeholder => "タグ検索", :type => "text"}/
-        -#     %button.btn.btn-outline-dark.my-2.my-sm-0{:type => "submit"} Search
         %nav.my-2.my-md-0.mr-md-3.pr-5
           - if user_signed_in?
             .grid-6
