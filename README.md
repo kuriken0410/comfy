@@ -4,10 +4,11 @@
 
 ## :globe_with_meridians: Comfyとは
 * 部屋着投稿を中心としたWebアプリケーションです。
-* 作成期間： 2020/10/1 〜 現在開発途中
 * Trelloによるタスク管理
 
 ## :globe_with_meridians: 機能一覧
+
+## :globe_with_meridians: 機能詳細
 ### ログイン関係（gem 'devise'を利用）  
 1)nickname（9文字以下）,email,pwdの組み合わせでvalidationを実施。  
 2)posts#index(root)ページは、application.html.hamlに - if user_signed_in? と書き、ログイン時、未ログイン時の表示を分けている（ログインボタンが異なる）。  
