@@ -30,7 +30,7 @@
 ②comments_controllerのルーティングを、posts_controllerのルーティングの中にネストさせて、/posts/:post_id/commentsというルーティングを実現、post_idをcommentのparamsに追加。  
 ③show.html.hamlのコメント投稿関連部分に、 - if current_user と記述し、未ログイン状態でのコメント投稿ができないように設定。  
 4)コメント投稿機能へ非同期通信を実装。JS（jQuery）を用いる。関連するファイルは、javascripts/comment.js。投稿データ（form_tag内のデータ）は、FormDataオブジェクトに格納。  
-### テスト  
+### テスト（Rspec）
 １）ユーザー登録に関するテスト（単体テスト）を実施。factory_botを活用し、以下の内容でテストを実施。 
 * nicknameとemail、passwordとpassword_confirmationが存在すれば登録できること
 * nicknameが空では登録できないこと
