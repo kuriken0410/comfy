@@ -1,6 +1,6 @@
 <h1 align="center">Webアプリケーション（Comfy）</h1>
 
-![top_page](https://i.gyazo.com/ddb2098ec628d81167113b88e0abb558.jpg)
+![top_page](https://i.gyazo.com/e011590669a5c463eba10c20293056ae.jpg)
 
 ## :globe_with_meridians: Comfyとは
 * 部屋着を中心とした写真・テキストの投稿・共有ができるWebアプリケーションです。
