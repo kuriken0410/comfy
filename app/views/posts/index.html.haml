@@ -29,8 +29,7 @@
         　　★写真を投稿してみたり、お気に入りの投稿を探してみよう！
         %br
           ★投稿されている写真にはコメントすることもできるよ！
-    - if user_signed_in?
-    - else
+    - if !user_signed_in?
       %h6.text-center.bg-light.font-weight-bold.pb-4
         ※※※ 投稿とコメントには新規登録/ログインが必要です ※※※
 
