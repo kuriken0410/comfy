@@ -24,7 +24,7 @@
                     = current_user.nickname
                   .dropdown-menu
                     = link_to "マイページ", "/users/#{current_user.id}", class: 'dropdown-item post'
-                    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'dropdown-item post'
+                    = link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: 'dropdown-item post'
                 %li.nav-item.font-weight-bold.ml-5.pb-0
                   = link_to "投稿する", new_post_path, class: 'btn btn-outline-dark font-weight-bold'
           - else
