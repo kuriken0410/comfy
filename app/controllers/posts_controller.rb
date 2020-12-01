@@ -3,8 +3,7 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @posts = Post.includes(:user).order("created_at DESC")
-    @kaminari = Post.page(params[:page]).per(9)
+    @posts = Post.includes(:user).page(params[:page]).order("created_at DESC")
   end
 
   def new
@@ -34,8 +33,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:keyword])
-    @kaminari = Post.page(params[:page]).per(9)
+    @posts = Post.search(params[:keyword]).page(params[:page]).order("created_at DESC")
     # respond_to do |format|
     #   format.html
     #   format.json

@@ -10,6 +10,6 @@
           - @posts.each do |post|
             = render partial: "posts/post", locals: { post: post }
 
-    = paginate @kaminari
+    = paginate @posts
 
 = render partial: "posts/footer-index"
