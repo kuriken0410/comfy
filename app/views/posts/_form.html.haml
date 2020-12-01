@@ -1,8 +1,6 @@
 = form_with model: post, html: {class: "novalidate"}, local: true do |form|
-  .custom-file.mb-5.mt-4
-    = form.file_field :image, class: "custom-file-input pb-3", required: "", type: "file", id: "customFile"
-    = form.label :'ファイルを選んでください', class: 'custom-file-label pb-3', for: "customFile"
-    .invalid-feedback ファイルを選んでください
+  .image-file.mb-5.mt-4
+    = form.file_field :image, class: "form-control-file", required: "", type: "file", id: "exampleFormControlFile1"
   .form-group.pb-3
     = form.label :'本文記入欄', for: "Textarea"
     = form.text_area :text, id: "Textarea", class: 'form-control', placeholder: "こちらに内容を記載してください", required: "", rows: "2"
