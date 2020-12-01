@@ -1,25 +1,4 @@
-.bd-example
-  #carouselExampleCaptions.carousel.slide{"data-ride" => "carousel"}
-    %ol.carousel-indicators
-      %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleCaptions"}
-      %li{"data-slide-to" => "1", "data-target" => "#carouselExampleCaptions"}
-    .carousel-inner{:role => "listbox"}
-      .carousel-item.active
-        = image_tag "p7811.jpg", alt: "First slide", class: "img-fluid"
-        .carousel-caption.d-none.d-md-block
-          %h3.text-secondary Choose your favorite
-          %p.text-secondary I'm sure you'll find special clothes just for you.
-      .carousel-item
-        = image_tag "p5213.jpg", alt: "Second slide", class: "img-fluid"
-        .carousel-caption.d-none.d-md-block
-          %h3.text-secondary Choose a gift for your partner
-          %p.text-secondary You will surely find the perfect clothes for your partner.
-    %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleCaptions", :role => "button"}
-      %span.carousel-control-prev-icon{"aria-hidden" => "true"}
-      %span.sr-only Previous
-    %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleCaptions", :role => "button"}
-      %span.carousel-control-next-icon{"aria-hidden" => "true"}
-      %span.sr-only Next
+= render partial: "carousel"
 
 %explanation
   .container-fluid.bg-light.pt-5.pb-3
@@ -34,10 +13,7 @@
         ※※※ 投稿とコメントには新規登録/ログインが必要です ※※※
 
 %search.bg-light.d-flex.justify-content-center.pt-1.pb-5
-  .form-inline
-    = form_with(url: search_posts_path, local: true, method: :get) do |form|
-      = form.text_field :keyword, placeholder: "投稿を検索する", class: 'form-control form-control-lg pr-5 mr-3'
-      = form.submit "検索", class: 'btn btn-warning btn-lg px-4'
+  = render partial: "search"
 
 %main
   .album.bg-light
