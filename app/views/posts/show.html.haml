@@ -16,7 +16,7 @@
                 = link_to '削除', post_path(@post.id), method: :delete, class: 'btn btn-outline-secondary btn-sm'
   .container
     - if user_signed_in?
-      = form_with(model: [@post, @comment], local: true, id: "new_comment") do |form|
+      = form_with(model: [@post, @comment], local: true) do |form|
         .form-group.pb-1.px-5.mx-5
           = form.text_area :text, id: "Textarea", class: 'form-control', placeholder: "コメントする", required: "", rows: "2"
         .form-group.d-flex.justify-content-center.pb-4
