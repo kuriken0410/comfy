@@ -7,3 +7,27 @@
     .invalid-feedback 本文を記載してください
   .form-group.d-flex.justify-content-center.pb-4
     = form.submit "送　信", class: 'border-0 px-5 py-2 bg-warning rounded'
+
+
+.container
+  .row
+    .col-md-6.col-md-offset-3
+      .preview{:style => "overflow:hidden"}
+        #beforeUpload
+          = icon("fas fa-4x fw","file-image")
+        %img#croppedImage{:src => ""}/
+      = form_with model: @user, url: users_path do |f|
+        = f.file_field :image
+        = f.hidden_field :x, id:"dataX"
+        = f.hidden_field :y, id:"dataY"
+        = f.hidden_field :width, id:"dataWidth"
+        = f.hidden_field :height, id:"dataHeight"
+        = f.submit "button", id:"btnUpload", class: 'btn btn-success'
+      #cropModal.modal.fade{:role => "dialog"}
+        .modal-dialog
+          .modal-content
+            .modal-body
+              .img-container
+                %img#imageModal{:alt => "picture", :src => ""}/
+            .modal-footer
+              %button#btn-save.btn.btn-primary{"data-dismiss" => "modal", :type => "button"} Save
