@@ -6,4 +6,3 @@ json.array! @posts do |post|
   json.nickname post.user.nickname
   json.user_sign_in current_user
 end
-
