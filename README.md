@@ -31,7 +31,7 @@
 ①この実装に合わせて、postモデルとcommentモデル（一対多）、及びuserモデルとcommentモデル（一対多）にアソシエーションを定義（詳細はデータベース設計をご確認お願いします）。  
 ②comments_controllerのルーティングを、posts_controllerのルーティングの中にネストさせて、/posts/:post_id/commentsというルーティングを実現、post_idをcommentのparamsに追加。  
 ③show.html.hamlのコメント投稿関連部分に、 - if current_user と記述し、未ログイン状態でのコメント投稿ができないように設定。  
-4)コメント投稿機能へ非同期通信を実装。JS（jQuery）を用いる。関連するファイルは、javascripts/comment.js。投稿データ（form_with内のデータ）は、FormDataオブジェクトに格納。  
+4)コメント投稿機能へ非同期通信を実装。JS（jQuery）を用いる。関連するファイルは、javascript/comment.js。投稿データ（form_with内のデータ）は、FormDataオブジェクトに格納。  
 <br>
 
 ### テスト（Rspec）
