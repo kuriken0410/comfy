@@ -59,7 +59,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails', "~> 2.0"
 gem 'pry-rails'
-gem 'bootstrap', '~> 4.5.0'
 gem 'devise'
 gem 'kaminari'
 gem 'mini_magick'
