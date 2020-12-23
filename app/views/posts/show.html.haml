@@ -16,9 +16,9 @@
                 = link_to '削除', post_path(@post.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'btn btn-outline-secondary btn-sm'
   .container
     - if current_user
-      = form_with(model: [@post, @comment], local: true) do |form|
+      = form_with(model: [@post, @comment], local: true, id: "new_comment") do |form|
         .form-group.pb-1.px-5.mx-5
-          = form.text_area :text, id: "Textarea", class: 'form-control', placeholder: "コメントする", required: "", rows: "2"
+          = form.text_area :text, class: 'form-control', placeholder: "コメントする", required: "", rows: "2"
         .form-group.d-flex.justify-content-center.pb-4
           = form.submit "　　送　信　　", class: 'btn btn-primary px-5'
     - else
@@ -30,7 +30,7 @@
           %p.px-5
             %strong
               = link_to comment.user.nickname, "/users/#{comment.user_id}", class: 'btn btn-outline-primary btn-sm'
-              　：　
+              ：
             = comment.text
 
 = render partial: "footer-index"

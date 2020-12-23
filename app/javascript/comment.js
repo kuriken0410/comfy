@@ -1,8 +1,8 @@
 $(function(){
   function buildHTML(comment){
-    let html = `<p>
+    let html = `<p class="px-5">
                   <strong>
-                    <a href=/users/${comment.user_id}>${comment.user_name}</a>：
+                    <a class="btn btn-outline-primary btn-sm" href=/users/${comment.user_id}>${comment.user_name}</a> ：
                   </strong>
                   ${comment.text}
                 </p>`
@@ -22,7 +22,7 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.comments px-5').append(html);
+      $('.comments.px-5').append(html);
       $('.form-control').val('');
       $('.btn btn-primary px-5').prop('disabled', false);
     })
