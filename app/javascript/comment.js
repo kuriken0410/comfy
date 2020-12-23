@@ -24,7 +24,7 @@ $(function(){
       let html = buildHTML(data);
       $('.comments.px-5').append(html);
       $('.form-control').val('');
-      $('.btn btn-primary px-5').prop('disabled', false);
+      $('.btn.btn-primary.px-5').prop('disabled', false);
     })
     .fail(function(){
       alert('error');
