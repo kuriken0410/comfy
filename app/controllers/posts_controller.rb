@@ -34,10 +34,10 @@ class PostsController < ApplicationController
 
   def search
     @posts = Post.search(params[:keyword]).page(params[:page]).order("created_at DESC")
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.json
+    # end
   end
 
 
