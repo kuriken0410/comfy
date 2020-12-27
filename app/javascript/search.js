@@ -71,7 +71,7 @@ $(function() {
       }
     })
     .fail(function() {
-      alert('error');
+      alert('投稿の検索に失敗しました');
     });
   });
 });
