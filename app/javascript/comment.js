@@ -27,7 +27,7 @@ $(function(){
       $('.btn.btn-primary.px-5').prop('disabled', false);
     })
     .fail(function(){
-      alert('error');
+      alert("コメント送信に失敗しました");
     })
   })
 })
