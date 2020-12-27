@@ -1,7 +1,6 @@
 $(function() {
 
   let search_list = $(".row.d-flex.justify-content-center");
-
   function appendPost(post) {
     if(post.user_sign_in && post.user_sign_in.id == post.user_id){
       let html = `<div class="col-md-4 col-lg-3 mb-5">
@@ -52,7 +51,6 @@ $(function() {
     let html = `<div class='name'>${ msg }</div>`
     search_list.append(html);
   }
-
   $(".form-control.form-control-lg.pr-5.mr-3").on("keyup", function() {
     let input = $(".form-control.form-control-lg.pr-5.mr-3").val();
     $.ajax({
