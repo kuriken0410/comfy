@@ -71,7 +71,7 @@
 #### フロントエンド
 * Haml 5.1.2
 * Sass 3.7.4
-* jquery-rails 4.4.0
+* jquery(Webpacker管理)
 
 ### ■ フレームワーク
 * Ruby on Rails 6.0.3.2
