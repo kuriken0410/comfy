@@ -109,8 +109,8 @@
 `$ rails s`<br>
 :point_right:`http://localhost:3000`
 
-## :page_facing_up: データベース設計
 
+## :page_facing_up: データベース設計
 ## ER図
 ![comｆｙ](https://gyazo.com/97f24ef339423a2cd9ef39fe224f83e9/raw)
 
